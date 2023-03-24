@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&family=Fraunces:wght@700;900&display=swap');
+/*---------CONTAINER --------*/
+
+#container {
+	min-width: 1050px;
+	border: 1px solid red;
+}
+
+:root {
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark-desaturated-cyan-graphic-text: hsl(167, 40%, 24%);
+  --dark-blue-photography-text: hsl(198, 62%, 26%);
+  --dark-moderate-cyan-footer: hsl(168, 34%, 41%);
+  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/*---------HEADER --------*/
+
+header {
+	margin:0;
+	background: #3ebfff url(imagens/desktop/image-header.jpg) no-repeat;
+	height: 970px;
+	background-size:1800px;
+	background-position: center;
+}
+
+
+ header h1.logo{
+ 	float: left;
+ 	background: url(imagens/logo.svg) no-repeat;
+ 	text-indent:-9999px;
+ 	width: 20%;
+ 	height: 80px;
+ 	margin-left: 3%;
+ 	background-size:150px;
+ 	margin-top:40px;
+ }
+ #header-titulo{
+ 	clear: both;
+ 	margin-top: 60px;
+ }
+
+ #header-titulo .img-seta {
+ 	text-align: center;
+ 	margin-top: 30px;
+ }
+
+ @keyframes go-back{
+ 	from {
+ 		transform: translateY(0px);
+ 	}
+
+ 	to {
+ 		transform: translateY(50px);
+ 	}
+ }
+
+
+
+#header-titulo .img-seta {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-seta:hover{
+	animation: go-back 1.0s infinite alternate;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+	font-family: beans;
+	src:url("fontes/beans.woff");
+}
+
+
+.titulo-principal {
+	color: white;
+	text-align: center;
+	font-size: 4.5em;
+	font-family: beans;
+
+}
+
+
+
+
+
+/*---------BARRA DE NAVEGAÇÃO --------*/
+@keyframes animacao-nav-contato {
+	from{
+		background: white;
+		transition: all 1s;
+
+	}
+
+	to{
+		background:#3ebfff;
+		color: white;
+		padding-top: 3px;
+
+	}
+}
+
+@keyframes animacao-nav {
+	from{
+		color: white;
+		transition: all 0.5s;
+
+	}
+
+	to{
+		padding-bottom: 1px;
+		font-size: 20px;
+		text-shadow: 1px 1px 7px white;
+
+
+	}
+}
+
+
+#links-nav li.item2 a:hover{
+	background:#3ebfff;
+	color: white;
+	padding-top: 2px;
+	animation-name: animacao-nav-contato;
+	animation-duration: 0.7s;
+	font-family: 'Fraunces';
+
+}
+
+#links-nav li.item a:hover{
+	padding-top: 1px;
+	animation: animacao-nav 1s;
+
+}
+
+
+#links-nav ul {
+	float: right;
+	margin-top:15px;
+	height: 80px;
+	margin-right: 40px;
+
+
+
+}
+
+#links-nav li {
+	list-style:none;
+	text-decoration: none;
+	float: right;
+	margin-top: 25px;
+	margin-right: 40px;
+}
+
+#links-nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.2em;
+	font-family: 'Barlow', serif;
+}
+
+#links-nav li.item2 a {
+	color: black;
+	background: white;
+	border-radius: 25px;
+	width: 20px;
+	text-align: center;
+	font-size: 1.4em;
+	padding: 14px;
+	font-family: 'Fraunces';
+
+}
+
+
+
+/*---------CORPO DO SITE-------*/
+
+#principal #section-1{
+	text-align: center;
+}
+
+#principal .texto-ovo{
+	width: 50%;
+	height: 600px;
+	align-items: left;
+	box-sizing: border-box;
+	padding: 150px;
+}
+#principal .texto-ovo h1 {
+	margin-bottom: 40px;
+	font-family:Stencil Std, fantasy;
+}
+
+#principal .texto-ovo p {
+	margin-bottom: 40px;
+
+}
+
+
+
+#principal .texto-ovo button{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 1.3em;
+	border-bottom: 8px solid #fff099;
+	background: white;
+	height: 37px;
+	width: 100px;
+	border-radius: 15%;
+}
+
+
+#principal #section-1 .img-ovo {
+	max-width: 100%;
+	overflow: hidden;
+	margin: 0 0 1px 1px;
+
+}
+
+
+
+#container #section-1 .img-ovo img{
+	background: #ffd602;
+	width: 100%;
+	height: 600px;
+	transition: all 0.5s;
+}
+
+#container #section-1 .img-ovo img:hover{
+	transform: scale(1.3);
+	transition: all 0.5s;
+
+}
+
+
+/*----- sessão 2 --*/
+
+
+#principal .texto-taca{
+	width: 50%;
+	height: 600px;
+	align-items: right;
+	box-sizing: border-box;
+	padding: 150px;
+	float: left;
+}
+#principal .texto-taca h1 {
+	margin-bottom: 40px;
+	font-family:Stencil Std, fantasy;
+}
+
+#principal .texto-taca p {
+	margin-bottom: 40px;
+
+}
+
+
+
+#principal .texto-taca button{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 1.3em;
+	border-bottom: 8px solid #ff8080;
+	background: white;
+	height: 37px;
+	width: 100px;
+	border-radius: 15%;
+}
+
+
+/* -----------IMAGEM TAÇA --------*/
+
+#container #taca{
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 600px;
+	overflow: hidden;
+}
+
+#container #taca img{
+	background: #ffd602;
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s;
+	
+}
+
+
+#principal #taca img:hover{
+	transform: scale(1.3);
+	transition: all 0.5s
+
+}
+
+
+
+
+
+/*----- sessão 3 --*/
+
+#principal .texto-taca{
+	width: 50%;
+	height: 600px;
+	align-items: right;
+	box-sizing: border-box;
+	padding: 150px;
+	float: left;
+}
+#principal .texto-taca h1 {
+	margin-bottom: 40px;
+	font-family:Stencil Std, fantasy;
+}
+
+#principal .texto-taca p {
+	margin-bottom: 40px;
+
+}
+
+
+
+#principal .texto-taca button{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 1.3em;
+	border-bottom: 8px solid #ff8080;
+	background: white;
+	height: 37px;
+	width: 100px;
+	border-radius: 15%;
+}
+
+
+
+
+
+
+/* --------- CereJa-----*/
+
+/* -----------IMAGEM cereja --------*/
+
+#section-3 #cereja{
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 600px;
+	overflow: hidden;
+}
+
+#section-3 #cereja img{
+	background: #ffd602;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	margin: auto;
+	transition: all 0.5s;
+
+}
+
+
+#section-3 #cereja img:hover{
+	transform: scale(1.3);
+	transition: all 0.5s;
+
+
+}
+
+#section-3 .textoCereja{
+	text-align: center;
+	z-index: 2;
+	margin: auto;
+	position: relative;
+	top: 90px;
+	padding: 5px;
+}
+
+
+
+
+
+
+/* --------- LARANJA-----*/
+
+/* -----------IMAGEM LARANJA --------*/
+
+#section-3 #laranja{
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 600px;
+	overflow: hidden;
+}
+
+#section-3 #laranja img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: auto;
+	z-index: 3;
+	transition: all 0.5s;
+
+}
+
+
+#section-3 #laranja img:hover{
+	transform: scale(1.3);
+	transition: all 0.5s
+
+}
+
+#section-3 .textoLaranja{
+	text-align: center;
+	z-index: 3;
+	margin: auto;
+	position: relative;
+	top: 90px;
+	padding: 5px;
+
+}
+
+
+
+/* -------------------------------------*/
+#section-4 {
+	width: 100%;
+	margin-top: 10%;
+	text-align: center;
+}
+#section-4 h2{
+	color: #A9A9A9;
+	margin-bottom: 20px;
+}
+
+#section-4 img{
+	border-radius: 50%;
+	max-width: 100px;
+	margin: 10px 0 20px 0;
+	transition: all 0.5s;
+}
+
+#section-4 div{
+	width: 33%;
+	float: left;
+	padding: 10px;
+}
+small {
+	color: #b3b3b3;
+}
+
+
+
+
+
+
+
+
+
+
+#section-5 {
+	max-width: 100%;
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
+
+
+#section-5 div{
+	max-width: 25%;
+	float: left;
+}
+
+#section-5 div img{
+	max-width: 100%;
+}
+
+
+
+footer {
+	background: #80ff80;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	margin-top: 5%;
+}
+
+footer .imgFooter img{
+	margin: 4% auto;
+	width: 18%;
+}
+footer ul{
+	margin: auto;
+	align-items: center;
+	display: flex;
+	flex: row-reverse;
+	justify-content: center;
+	overflow: hidden;
+}
+
+footer li{
+	display: inline-block;
+	padding: 0 10px;
+	margin: 0 20px;
+	margin-bottom: 4%;
+	color: #BEBEBE;
+}
+footer li a{
+	color: #696969;
+	transition: font-size 1s;
+	font-size: 1.2em;
+}
+
+
+footer li a:hover{
+	text-decoration: none;
+	color: white;
+	font-size: 1.3em;
+	transition: font-size 1s;
+	
+
+}
+
+footer p{
+	margin-top: 35px;
+	text-decoration: none;
+	margin-bottom: 0;
+	font-size: 1.1em;
+}
+footer p a{
+	text-decoration: none;
+	color: white;
+}
+footer p a:hover{ 
+	color:#696969;
+	text-decoration: none;
+ }
+
+
+
+footer .logos-Footer img{
+	margin: 8px 10px 8px 10px;
+}
+
+/*---------CLEAR--------*/
+
+
+.clear{
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+<h1 class="logo">Lado ensolarado</h1>
+				<div id="links-nav"><!-- BARRA DE NAVEGAÇÃO -->
+					<ul>
+
+						<li class="item2"><a href="#"><strong>Contato</strong></a></li>
+						<li class="item"><a href="#">Projetos</a></li>
+						<li class="item"><a href="#">Serviços</a></li>
+						<li class="item"><a href="#">Sobre</a></li>
+
+					</ul><!-- /fim nagevação -->
+
+				</div>
+
+				<div class="clear"></div>
+
+				<div id="header-titulo" ><!-- titulo principal -->
+
+					<h1 class="titulo">NÓS SOMOS CRIATIVOS</h1>
+					<div class="img-centralizar">
+						<img src="imagens/icon-arrow-down.svg">
+					</div>	
+				</div><!-- /fim titulo principal -->
+
+*/
+
+
+/*
+
+				<nav class="navbar navbar-expand-sm">
+					<h1 class="navbar-brand">Lado ensolarado</h1>
+
+					<!-- Botão hamburger -->
+
+					<button class="navbar-toggler" data-toggle="collapse" data-target="#navegacao">
+
+						<span class="navbar-toggler-icon"></span>
+
+					</button>
+
+					<div class="collapse navbar-collapse" id="navegacao">
+						<ul class="navbar-nav ml-auto">
+
+							<li class="nav-item item2 ">
+								<a href="#"><strong>Contato</strong></a>
+							</li>
+
+							<li class="nav-item item">
+								<a href="#">Projetos</a>
+							</li>
+
+							<li class="nav-item item">
+								<a href="#">Serviços</a>
+							</li>
+
+							<li class="nav-item item">
+								<a href="#">Sobre</a>
+							</li>
+
+						</ul>
+
+					</div>
+
+				</nav>
+
+*/
