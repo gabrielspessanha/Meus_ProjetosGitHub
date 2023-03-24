@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&family=Fraunces:wght@700;900&display=swap');
+/*---------CONTAINER --------*/
+#container {
+	min-width: 1050px;
+	max-width: 1920;
+	
+}
+
+:root {
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark-desaturated-cyan-graphic-text: hsl(167, 40%, 24%);
+  --dark-blue-photography-text: hsl(198, 62%, 26%);
+  --dark-moderate-cyan-footer: hsl(168, 34%, 41%);
+  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#principal{
+	width: 100%;
+	text-align: center;
+}
+
+
+/*---------HEADER --------*/
+
+header #button-header{
+	background: red;
+	color: white;
+	margin: 2px 8px;
+	border-radius: 13px;
+	padding: 5px 5px 3px 5px;
+	width: 80px;
+	height: 30px;
+	font-weight: 700;
+}
+
+#header-topo {
+	background: white;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	height: 70px;
+	align-items: center;
+	font-family: Arial, sans-serif;
+}
+
+#header-topo h2{
+	margin: 0 1%;
+	font-weight: 700;
+	font-size: 22px;
+	font-family: Impact, fantasy;
+
+}
+
+#header-topo span{
+	font-family: Optima, sans-serif;
+	font-size: 1.3em;
+	text-decoration: none;
+}
+
+
+
+/*----------NAVEGAÇÃO ---------------------------------------------*/
+
+
+
+nav {
+	width: 100%;
+	height: 700px;
+	background: url(imagens/background.png) no-repeat;
+	background-size: 100%;
+	display: flex;
+
+}
+div {
+	justify-content: center;
+}
+
+nav div#logo img{
+	width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------BODY -------*/
+
+body {
+	background: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#clear {
+	clear: both;
+}
