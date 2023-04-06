@@ -5,6 +5,7 @@
 }
 body{
     background: black;
+    
 }
 
 .game-board {
@@ -22,7 +23,7 @@ body{
     position: absolute;
     bottom: 0;
     width: 80px;
-     animation: pipe-animation 1.5s infinite linear;
+    animation: pipe-animation 2s infinite linear;
 }
 
 .mario {
@@ -79,3 +80,55 @@ body{
         right: 100%;
     }
 }
+
+#pontuacao {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgba(255, 187, 0, 0.945);
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'mario-coin', sans-serif;
+    
+  }
+  @font-face {
+    font-family: 'mario-coin';
+    src: url('../fontes/mario-coin.TTF') format('truetype');
+    
+  }
+
+  .footer{
+    margin: 0 auto;
+    color:white;
+    width: 300px;
+    font-family: normal;
+    font-family: 'mario-coin', sans-serif;
+    display: flex;
+    align-items: center;
+    transition: color 1s ease-in-out;
+    animation: mudar-cor 2s infinite alternate-reverse linear;
+
+    
+  }
+
+  
+  /* Define a animação para mudar continuamente a cor */
+  @keyframes mudar-cor {
+    0%   { color: red;
+         }
+    20%  { color: blue;
+        ; }
+        
+    40%  { color: green;
+        }
+        
+    60%  { color: yellow;
+         }
+    80% { color: red;
+        }
+
+    100% { color: rgb(255, 0, 170);
+        margin-top: 400px; }
+
+  }
