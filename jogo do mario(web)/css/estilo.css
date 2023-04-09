@@ -8,13 +8,12 @@ body{
     
 }
 
-.game-board {
+.game-board { /* corpo da pagina */
     width: 100%;
     height: 500px;
-    border-bottom: 15px solid #1d6e08;
-    margin: 0 auto;
+    border-bottom: 15px solid #34b912;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* se elemento sair da pagina sera escondido */
     background: linear-gradient(#0b9bd4, #a8cbec);
 }
 
@@ -96,39 +95,4 @@ body{
     font-family: 'mario-coin';
     src: url('../fontes/mario-coin.TTF') format('truetype');
     
-  }
-
-  .footer{
-    margin: 0 auto;
-    color:white;
-    width: 300px;
-    font-family: normal;
-    font-family: 'mario-coin', sans-serif;
-    display: flex;
-    align-items: center;
-    transition: color 1s ease-in-out;
-    animation: mudar-cor 2s infinite alternate-reverse linear;
-
-    
-  }
-
-  
-  /* Define a animação para mudar continuamente a cor */
-  @keyframes mudar-cor {
-    0%   { color: red;
-         }
-    20%  { color: blue;
-        ; }
-        
-    40%  { color: green;
-        }
-        
-    60%  { color: yellow;
-         }
-    80% { color: red;
-        }
-
-    100% { color: rgb(255, 0, 170);
-        margin-top: 400px; }
-
   }
