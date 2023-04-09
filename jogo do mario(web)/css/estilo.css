@@ -13,35 +13,35 @@ body{
     height: 500px;
     border-bottom: 15px solid #34b912;
     position: relative;
-    overflow: hidden; /* se elemento sair da pagina sera escondido */
-    background: linear-gradient(#0b9bd4, #a8cbec);
+    overflow: hidden; /* o conteúdo que ultrapassa o tamanho da div é ocultado e não é exibido na página */
+    background: linear-gradient(#037ef1, #679aca);
 }
 
 
-.pipe {
+.pipe {  /* obstaculo  */
     position: absolute;
     bottom: 0;
     width: 80px;
-    animation: pipe-animation 2s infinite linear;
+    animation: pipe-animation 2s infinite linear;  /* Faz referencia a animação do cano */
 }
 
-.mario {
+.mario { /* personagem */
     width: 150px;
-    position: absolute;
+    position: absolute; /* tira o elemento do fluxo normal da pagina e o elemento não muda de posição */
     bottom: 0;
 }
 
 .cloud {
     position: absolute;
     width: 650px;
-    animation: clouds-animation 20s infinite linear;
+    animation: clouds-animation 20s infinite linear; /* Faz referencia a animação das nuvems*/
 }
 
 .jump{
     animation: jump 600ms ease-out;
 }
 
-@keyframes pipe-animation{
+@keyframes pipe-animation{ /* Animação do cano */
     from {
         right: -80px;
     }
@@ -51,8 +51,8 @@ body{
     }
 }
 
-@keyframes jump {
-    0% {
+    @keyframes jump {   /* animação de pulo. cada porcentagem define oq fazer em cada estágio da animação */ 
+        0% {
         bottom: 0;
     }
     40%{
@@ -72,7 +72,7 @@ body{
     }
 } 
 
-@keyframes clouds-animation {
+@keyframes clouds-animation { /* animação da nuvem se mechendo*/
     from{
         right: -650px;
     }to {
@@ -82,12 +82,10 @@ body{
 
 #pontuacao {
     font-size: 50px;
-    font-weight: bold;
     color: rgba(255, 187, 0, 0.945);
     position: absolute;
     top: 10px;
     left: 50%;
-    transform: translateX(-50%);
     font-family: 'mario-coin', sans-serif;
     
   }
