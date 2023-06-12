@@ -1,0 +1,78 @@
+*{
+  margin: 0;padding: 0;border: 0;box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* ---------------------- FONTES --------------------------------*/
+@font-face{
+  font-family: "sanshiro";
+  src: url("fonts/SanshiroDisplay-Black.ttf");
+}
+/* -----------Main container----------------------*/
+
+#main_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur(20px);
+  background-size: cover;
+}
+
+/* ------Barra de navegação---------*/
+
+@import "./header.scss";
+
+/* ------------Corpo do site --------------------*/
+
+#main_section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* ------Titulo principal ------------------*/
+
+.main_titulo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 60px;
+  height: 300px;
+  font-size: 1.6em;
+  color:rgb(255, 255, 255);
+  background:linear-gradient(-45deg, #e98503, #0099f1,#ff8800,#03b8ff);
+  background-size: 400% 400%;
+  animation: titleAnimation 15s ease infinite;
+
+  h1{
+    text-align: center;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.857);
+  }
+}
+
+/* -------main-section --------------------*/
+
+@import "./main-section.scss";
+
+/* -------- footer -------------------*/
+
+footer{
+  display: flex;align-items: center;justify-content: center;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.175);
+  border-top: 3px solid rgba(255, 255, 255, 0.652);
+  color: rgb(0, 0, 0);
+}
+
+
+@keyframes titleAnimation {
+	0% {
+		background-position: 0% 25%;
+	}
+	50% {
+		background-position: 100% 25%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

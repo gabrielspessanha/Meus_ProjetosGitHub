@@ -1,0 +1,38 @@
+
+header{
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(28, 112, 168, 0.219);
+  border-bottom: 3px solid rgba(94, 167, 240, 0.421);
+  backdrop-filter: blur(5px);
+}
+
+.img_logo_header{
+  width: 100px;
+}
+.buttons_header{
+  display: flex;
+  gap: 10px;
+}
+
+.btn_header{
+  background-image: linear-gradient(45deg, rgba(11, 146, 209, 0.511), rgb(8, 117, 180));;
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid transparent;
+  width: 80px;
+  padding: 5px;
+  transition: 0.5s;
+  letter-spacing: 0.08em;
+  font-family: sanshiro, sans-serif;
+  color: rgba(255, 255, 255, 0.709);
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.226);
+
+  &:hover{
+    border-bottom: 3px solid rgb(255, 255, 255);
+  }
+}
