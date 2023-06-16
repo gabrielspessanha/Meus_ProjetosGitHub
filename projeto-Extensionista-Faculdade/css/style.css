@@ -12,11 +12,14 @@
   font-family: "sanshiro";
   src: url("fonts/SanshiroDisplay-Black.ttf");
 }
+/* -----------Mixin----------------------*/
 /* -----------Main container----------------------*/
 #main_container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: none;
+  gap: none;
   background-color: rgb(255, 255, 255);
   backdrop-filter: blur(20px);
   background-size: cover;
@@ -24,13 +27,15 @@
 
 /* ------Barra de navegação---------*/
 header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
   position: sticky;
   z-index: 999;
   top: 0;
   padding: 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: rgba(28, 112, 168, 0.219);
   border-bottom: 3px solid rgba(94, 167, 240, 0.421);
   backdrop-filter: blur(5px);
@@ -46,15 +51,15 @@ header {
 }
 
 .btn_header {
+  width: 80px;
+  padding: 5px;
+  font-family: sanshiro, sans-serif;
+  color: rgba(255, 255, 255, 0.709);
+  letter-spacing: 0.08em;
   background-image: linear-gradient(45deg, rgba(11, 146, 209, 0.511), rgb(8, 117, 180));
   backdrop-filter: blur(10px);
   border-bottom: 3px solid transparent;
-  width: 80px;
-  padding: 5px;
   transition: 0.5s;
-  letter-spacing: 0.08em;
-  font-family: sanshiro, sans-serif;
-  color: rgba(255, 255, 255, 0.709);
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.226);
 }
 .btn_header:hover {
@@ -65,19 +70,23 @@ header {
 #main_section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 0;
 }
 
 /* ------Titulo principal ------------------*/
 .main_titulo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  gap: 0;
+  color: white;
   width: 100%;
-  margin: 60px;
   height: 300px;
+  margin: 60px;
   font-size: 1.6em;
-  color: rgb(255, 255, 255);
   background: linear-gradient(-45deg, #e98503, #0099f1, #ff8800, #03b8ff);
   background-size: 400% 400%;
   animation: titleAnimation 15s ease infinite;
@@ -99,39 +108,43 @@ header {
 }
 
 .section {
-  width: 100%;
   display: grid;
-  grid-template-columns: 2fr 2fr;
+  flex-direction: none;
+  justify-content: none;
+  align-items: none;
   gap: 10px;
+  width: 100%;
+  grid-template-columns: 2fr 2fr;
   padding: 10px 30px 10px 60px;
   grid-template-areas: "text image";
 }
 
-.imagem_section {
+.imagem_section, .imagem_section img {
   grid-area: image;
   height: 100%;
   width: 100%;
   padding: 10px 0px;
 }
 .imagem_section img {
-  height: 100%;
-  width: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .text_section {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 0;
   padding: 20%;
   border-radius: 10px;
   grid-area: text;
   margin-bottom: 10px;
 }
 .text_section h1, .text_section p {
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 3px 4px 20px black;
@@ -139,13 +152,11 @@ header {
   max-width: 400px;
   color: rgb(255, 255, 255);
   background-color: rgb(0, 138, 180);
-  font-weight: 400;
-  font-family: Georgia, "Times New Roman", Times, serif;
 }
 .text_section h1 a, .text_section p a {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   text-decoration: none;
-  color: rgb(171, 210, 255);
+  color: rgb(0, 17, 255);
 }
 
 .section01 {
@@ -182,14 +193,19 @@ header {
 /* -------- footer -------------------*/
 footer {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  gap: 0;
+  color: black;
+  width: none;
   height: 80px;
-  background: rgba(255, 255, 255, 0.175);
+  margin: none;
+  background: rgba(9, 129, 165, 0.175);
   border-top: 3px solid rgba(255, 255, 255, 0.652);
-  color: rgb(0, 0, 0);
 }
 
+/* -------- Keyframes -------------------*/
 @keyframes titleAnimation {
   0% {
     background-position: 0% 25%;
