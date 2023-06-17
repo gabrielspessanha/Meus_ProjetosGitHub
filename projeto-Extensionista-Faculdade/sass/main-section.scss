@@ -1,9 +1,5 @@
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
-
+*{
+  box-sizing: border-box;}
 #mainParagraph{
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
@@ -15,23 +11,26 @@
 }
 .section{
   @include aling-items(grid,none,none,none,10px);
-  width: 100%;
-  height: 800px;
+  max-width: 100%;
+  height: 700px;
   grid-template-columns: 2fr 2fr;
   padding: 10px 30px 10px 60px;
   grid-template-areas:
   "text image";
 }
 .imagem_section{
+  @include aling-items(flex,none,center,center,0);
   grid-area: image;
-  height: 100%;
-  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
   padding: 10px 10px;
+
+  
   img{
     @extend .imagem_section;
     border-radius: 20px;
     object-fit: contain;
-    height: 80%;
+    height: 100%;
   }
   
 }
