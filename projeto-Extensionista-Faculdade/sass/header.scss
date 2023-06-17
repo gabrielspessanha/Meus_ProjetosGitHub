@@ -1,12 +1,9 @@
 
 header{
   @include aling-items(flex,row,space-between,center,0);
-  position: sticky;
-  z-index: 999;
-  top: 0;
   padding: 25px;
-  background: rgba(28, 112, 168, 0.219);
-  border-bottom: 3px solid rgba(94, 167, 240, 0.421);
+  background-image:  linear-gradient(45deg, rgba(11, 146, 209, 0.511), rgb(8, 117, 180));
+  border-bottom: 3px solid rgba(168, 171, 173, 0.664);
   backdrop-filter: blur(5px);
 }
 
@@ -24,7 +21,7 @@ header{
   font-family: sanshiro, sans-serif;
   color: rgba(255, 255, 255, 0.709);
   letter-spacing: 0.08em;
-  background-image: linear-gradient(45deg, rgba(11, 146, 209, 0.511), rgb(8, 117, 180));;
+  background-image: linear-gradient(45deg, rgba(11, 146, 209, 0.511), rgb(8, 117, 180));
   backdrop-filter: blur(10px);
   border-bottom: 3px solid transparent;
   transition: 0.5s;

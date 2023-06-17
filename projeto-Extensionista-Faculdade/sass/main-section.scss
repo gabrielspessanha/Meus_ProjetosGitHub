@@ -1,3 +1,9 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
 #mainParagraph{
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
@@ -10,6 +16,7 @@
 .section{
   @include aling-items(grid,none,none,none,10px);
   width: 100%;
+  height: 800px;
   grid-template-columns: 2fr 2fr;
   padding: 10px 30px 10px 60px;
   grid-template-areas:
@@ -19,13 +26,16 @@
   grid-area: image;
   height: 100%;
   width: 100%;
-  padding: 10px 0px;
+  padding: 10px 10px;
   img{
     @extend .imagem_section;
     border-radius: 20px;
+    object-fit: contain;
+    height: 80%;
   }
   
 }
+
 
 .text_section{
   @include aling-items(flex,column,center,center,0);
@@ -34,26 +44,30 @@
   grid-area: text;
   margin-bottom: 10px;
 
-  h1, p{
-    font-weight: 400;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-size: 1.4rem;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 3px 4px 20px black;
+  div{
+    font-family: sans-serif;
+    font-size: 1.2rem;
     margin-bottom: 20px;
     max-width: 400px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 138, 180);
+    color: rgb(0, 0, 0);
     
+    h1{
+      margin-bottom: 5px;
+    }
 
-    
-  a{
-    font-size: 1.4rem;
+    a{
+    font-size: 1.2rem;
     text-decoration: none;
-    color: rgb(0, 17, 255);
-  }
+    color: rgb(0, 0, 0);
+    padding: 4px;
+    background-color: rgba(254, 255, 255, 0.486);
+    border: 2px solid ;
+    }
   }
 }
+
+
+
+
 @import "./sectionsExtras.scss";
+
