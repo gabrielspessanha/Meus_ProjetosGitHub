@@ -1,0 +1,90 @@
+
+*{
+  margin: 0;padding: 0;border: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* ---------------------- FONTES --------------------------------*/
+@font-face{
+  font-family: "sanshiro";
+  src: url("fonts/SanshiroDisplay-Black.ttf");
+}
+
+
+/* -----------Mixin----------------------*/
+
+@mixin aling-items ($display , $flex-direction, $justfy-content, $aling-items , $gap){
+  display: $display;
+  flex-direction: $flex-direction;
+  justify-content: $justfy-content;
+  align-items: $aling-items;
+  gap: $gap;
+}
+@mixin styles ($color, $width , $heigth,$margin){
+  color: $color;
+  width: $width;
+  height: $heigth;
+  margin: $margin;
+}
+/* -----------Main container----------------------*/
+
+#main_container{
+  @include aling-items(flex,column,space-between,none,none);
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur(20px);
+  background-size: cover;
+}
+
+/* ------Barra de navegação---------*/
+
+@import "header.scss";
+
+/* ------------Corpo do site --------------------*/
+
+#main_section{
+  @include aling-items(flex,column,center,center,0);
+  
+}
+/* ------Titulo principal ------------------*/
+
+
+.main_titulo{
+  @include aling-items(flex,row,center,center,0);
+  @include styles(white,100%,300px,60px);
+  font-size: 1.6em;
+  background:linear-gradient(-45deg, #0367e9, #0099f1,#002291,#03b8ff);
+  background-size: 400% 400%;
+  animation: titleAnimation 15s ease infinite;
+
+  h1{
+    text-align: center;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.857);
+  }
+}
+
+/* -------main-section --------------------*/
+
+@import "./main-section.scss";
+
+/* -------- footer -------------------*/
+
+footer{
+  @include aling-items(flex,row,center,center,0);
+  @include styles(black,none,80px, none);
+  background: rgba(9, 129, 165, 0.175);
+  border-top: 3px solid rgba(255, 255, 255, 0.652);
+}
+
+/* -------- Keyframes -------------------*/
+
+@keyframes titleAnimation {
+	0% {
+		background-position: 0% 25%;
+	}
+	50% {
+		background-position: 100% 25%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
