@@ -1,32 +1,22 @@
+@font-face{
+  font-family: 'dunkin';
+  src: url("../fonts/Dunkin\ Sans.woff2") format('woff');
+}
 
 header{
-  @include aling-items(flex,row,space-between,center,0);
+  @include aling-items(flex,row,center,center,0);
   padding: 25px;
   background-image:  linear-gradient(45deg, rgba(11, 146, 209, 0.511), rgb(8, 117, 180));
   border-bottom: 3px solid rgba(168, 171, 173, 0.664);
   backdrop-filter: blur(5px);
+
+  h1{
+    font-family: 'dunkin',sans-serif;
+    color: rgb(226, 226, 226);
+  }
 }
+
 
 .img_logo_header{
   width: 100px;
-}
-.buttons_header{
-  display: flex;
-  gap: 10px;
-}
-
-.btn_header{
-  width: 80px;
-  padding: 5px;
-  font-family: sanshiro, sans-serif;
-  color: rgba(255, 255, 255, 0.709);
-  letter-spacing: 0.08em;
-  background-image: linear-gradient(45deg, rgba(11, 146, 209, 0.511), rgb(8, 117, 180));
-  backdrop-filter: blur(10px);
-  border-bottom: 3px solid transparent;
-  transition: 0.5s;
-  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.226);
-  &:hover{
-    border-bottom: 3px solid rgb(255, 255, 255);
-  }
 }

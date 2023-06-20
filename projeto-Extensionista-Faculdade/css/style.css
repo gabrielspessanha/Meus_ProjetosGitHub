@@ -10,7 +10,7 @@
 /* ---------------------- FONTES --------------------------------*/
 @font-face {
   font-family: "sanshiro";
-  src: url("fonts/SanshiroDisplay-Black.ttf");
+  src: url("../fonts/SanshiroDisplay-Black.ttf") format("ttf");
 }
 /* -----------Mixin----------------------*/
 /* -----------Main container----------------------*/
@@ -26,10 +26,14 @@
 }
 
 /* ------Barra de navegação---------*/
+@font-face {
+  font-family: "dunkin";
+  src: url("../fonts/Dunkin Sans.woff2") format("woff");
+}
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 0;
   padding: 25px;
@@ -37,30 +41,13 @@ header {
   border-bottom: 3px solid rgba(168, 171, 173, 0.664);
   backdrop-filter: blur(5px);
 }
+header h1 {
+  font-family: "dunkin", sans-serif;
+  color: rgb(226, 226, 226);
+}
 
 .img_logo_header {
   width: 100px;
-}
-
-.buttons_header {
-  display: flex;
-  gap: 10px;
-}
-
-.btn_header {
-  width: 80px;
-  padding: 5px;
-  font-family: sanshiro, sans-serif;
-  color: rgba(255, 255, 255, 0.709);
-  letter-spacing: 0.08em;
-  background-image: linear-gradient(45deg, rgba(11, 146, 209, 0.511), rgb(8, 117, 180));
-  backdrop-filter: blur(10px);
-  border-bottom: 3px solid transparent;
-  transition: 0.5s;
-  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.226);
-}
-.btn_header:hover {
-  border-bottom: 3px solid rgb(255, 255, 255);
 }
 
 /* ------------Corpo do site --------------------*/
@@ -79,18 +66,18 @@ header {
   justify-content: center;
   align-items: center;
   gap: 0;
-  color: white;
+  color: rgb(250, 250, 250);
   width: 100%;
   height: 300px;
   margin: 60px;
   font-size: 1.6em;
-  background: linear-gradient(-45deg, #0367e9, #0099f1, #002291, #03b8ff);
+  background: linear-gradient(-45deg, rgb(156, 150, 138), rgb(233, 231, 232), rgb(2, 97, 109), rgb(124, 169, 156));
   background-size: 400% 400%;
   animation: titleAnimation 15s ease infinite;
 }
 .main_titulo h1 {
   text-align: center;
-  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.857);
+  text-shadow: 2px 3px 5px rgba(11, 66, 110, 0.857);
 }
 
 /* -------main-section --------------------*/
