@@ -21,7 +21,7 @@ body{
 .pipe {  /* obstaculo  */
     position: absolute;
     bottom: 0;
-    width: 80px;
+    width: 120px;
     animation: pipe-animation 2s infinite linear;  /* Faz referencia a animação do cano */
 }
 
@@ -41,22 +41,50 @@ body{
     animation: jump 600ms ease-out;
 }
 
-@keyframes pipe-animation{ /* Animação do cano */
-    from {
-        right: -80px;
-    }
-
-    to {
-        right: 100%;
-    }
+#restartButton{
+    position: relative;
+    margin: 0 auto;
+    top: -15rem;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    font-weight: 600;
+    background-image: linear-gradient(to right, orange, yellow);
+    padding: 1.5rem 5rem;
 }
+
+#jumpButton{
+    display: none;
+    position: absolute;
+    left: 20%;
+    bottom: 6rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    outline: none;
+    border-radius: 2rem;
+    border: 2px solid orange;
+    background-color: rgb(0, 153, 255);
+    padding: 1rem 5rem;
+}
+
+    @keyframes pipe-animation{ /* Animação do cano */
+        from {
+            right: -80px;
+        }
+
+        to {
+            right: 100%;
+        }
+    }
 
     @keyframes jump {   /* animação de pulo. cada porcentagem define oq fazer em cada estágio da animação */ 
         0% {
         bottom: 0;
     }
     40%{
-        bottom: 180px;
+        bottom: 190px;
     }
 
     50%{
@@ -89,8 +117,75 @@ body{
     font-family: 'mario-coin', sans-serif;
     
   }
+
   @font-face {
     font-family: 'mario-coin';
     src: url('../fontes/mario-coin.TTF') format('truetype');
     
+  }
+
+  @media(max-width: 750px){
+
+    .pipe {  /* obstaculo  */
+        height: 60px;
+        width: 50px;
+        animation: pipe-animation 1.3s infinite linear;  /* Faz referencia a animação do cano */
+    }
+    
+    .mario { /* personagem */
+        width: 80px;
+        position: absolute; /* tira o elemento do fluxo normal da pagina e o elemento não muda de posição */
+        bottom: 0;
+    }
+
+    @keyframes pipe-animation{ /* Animação do cano */
+        from {
+            right: -130px;
+        }
+
+        to {
+            right: 100%;
+        }
+    }
+
+    @keyframes jump {   /* animação de pulo. cada porcentagem define oq fazer em cada estágio da animação */ 
+        0% {
+        bottom: 0;
+    }
+    40%{
+        bottom: 150px;
+    }
+
+    50%{
+        bottom: 150px;
+    }
+
+    60% {
+        bottom: 150px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+} 
+  }
+
+  @media(max-width: 500px){
+
+    @keyframes clouds-animation {
+        from{
+            right: -650px;
+        }to {
+            right: 100%;
+        }
+    }
+    
+    #restartButton{
+        font-size: 1.3rem;
+        padding: 1rem 4rem;
+    }
+
+    #jumpButton{
+        display: block;
+    }
   }
